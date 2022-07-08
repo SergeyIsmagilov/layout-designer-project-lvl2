@@ -18,7 +18,7 @@
     "surge": "^0.23.1"
   },
   "scripts": {
-    "lint": "npx stylelint ./src/**/*.{css,scss} & npx htmlhint ./src/*/*.html",
+    "lint": "npx stylelint \"src/**/*.{css,scss}\" & npx htmlhint ./src/**/*.html",
     "build": "sass ./src/scss/app.scss ./src/css/style.css"
   },
   "author": "Sergey Ismagilov",
