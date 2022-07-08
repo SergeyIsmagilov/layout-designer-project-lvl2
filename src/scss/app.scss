@@ -1,18 +1,73 @@
-@function rem($value) {
-  $result: ($value / $rem-base) * 1rem;
+/* base */
 
-  @return #{$result};
+:root {
+  --base-text: #cacaca;
+  --base-bg: #08020d;
 }
 
-h1,
-.h1 {
-  font-size: rem(30px);
+@font-face {
+  font-weight: 400;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
 
-  @include media("md") {
-    font-size: rem(45px);
-  }
+@font-face {
+  font-weight: 500;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-display: swap;
+}
 
-  @include media("lg") {
-    font-size: rem(60px);
-  }
+@font-face {
+  font-weight: 700;
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-display: swap;
+}
+
+/*
+* {
+  margin: 0;
+}
+*/
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--base-text);
+  background-color: var(--base-bg);
+}
+
+/* desktop */ /* нужно будет использовать @media */
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* mobile */
+
+h1 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
