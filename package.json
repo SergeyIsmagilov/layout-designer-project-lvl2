@@ -17,6 +17,10 @@
     "stylelint-scss": "^4.1.0",
     "surge": "^0.23.1"
   },
-  "author": "Nikita Mikhaylov",
+  "scripts": {
+    "lint": "npx stylelint ./src/**/*.{css,scss} & npx htmlhint ./src/*/*.html",
+    "build": "sass ./src/scss/app.scss ./src/css/style.css"
+  },
+  "author": "Sergey Ismagilov",
   "license": "ISC"
 }
