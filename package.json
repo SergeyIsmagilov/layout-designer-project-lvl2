@@ -1,0 +1,21 @@
+{
+  "name": "layout-designer-project-lvl2",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergeyIsmagilov/layout-designer-project-lvl2.git"
+  },
+  "main": "",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-scss": "^4.4.0",
+    "surge": "^0.23.1"
+  },
+  "author": "Sergey Ismagilov",
+  "license": "ISC"
+}
