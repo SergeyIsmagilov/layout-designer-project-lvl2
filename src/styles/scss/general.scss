@@ -1,0 +1,65 @@
+/*
+Создайте файл general.scss.
+Внутри файла расположите базовые стили проекта, которые не привязаны к конкретной секции.
+*/
+
+@import "variables";
+
+@font-face {
+  font-weight: 400;
+  font-family: Roboto;
+  src: url("../../fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Roboto;
+  src: url("../../fonts/Roboto-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: Roboto;
+  src: url("../../fonts/Roboto-Bold.ttf");
+  font-display: swap;
+}
+
+* {
+    margin: 0;
+  }  
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-gray;
+    background-color: $black;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 90px;
+
+  @include bold-uppercase;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 57px;
+
+  @include bold-uppercase;
+}
+
+@media screen and (max-width: 1239px) {
+    h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 27px;
+    }      
+}

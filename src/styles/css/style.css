@@ -1,4 +1,22 @@
 @charset "UTF-8";
+/*
+Создайте файл variables.scss.
+Все основные настройки проекта и цветовые схемы расположите в нём.
+Это удобнее сделать сразу.
+Определите основные цвета сайта и создайте для них соответствующие переменные.
+Подключите файл в самом верху файла app.scss.
+*/
+/*
+Создайте файл general.scss.
+Внутри файла расположите базовые стили проекта, которые не привязаны к конкретной секции.
+*/
+/*
+Создайте файл variables.scss.
+Все основные настройки проекта и цветовые схемы расположите в нём.
+Это удобнее сделать сразу.
+Определите основные цвета сайта и создайте для них соответствующие переменные.
+Подключите файл в самом верху файла app.scss.
+*/
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -17,20 +35,18 @@
   src: url("../../fonts/Roboto-Bold.ttf");
   font-display: swap;
 }
-/*
 * {
   margin: 0;
 }
-*/
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #cacaca;
-  background-color: #08020d;
+  color: #CACACA;
+  background-color: #08020D;
 }
 
-/* desktop-first (@media) */
 h1 {
   font-size: 60px;
   line-height: 90px;
@@ -45,15 +61,30 @@ h2 {
   text-transform: uppercase;
 }
 
-/* @mobile (нужно будет только перезаписать значения св-в, которые меняются) */
-h1 {
-  font-size: 30px;
-  line-height: 45px;
+@media screen and (max-width: 1239px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+/*
+Хорошим вариантом является создание отдельного SASS файла на каждый модуль проекта.
+*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-h2 {
-  font-size: 18px;
-  line-height: 27px;
+@media screen and (max-width: 1239px) {
+  .container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
