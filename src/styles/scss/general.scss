@@ -1,8 +1,3 @@
-/*
-Создайте файл general.scss.
-Внутри файла расположите базовые стили проекта, которые не привязаны к конкретной секции.
-*/
-
 @import "variables";
 
 @font-face {
@@ -41,25 +36,49 @@ body {
 h1 {
   font-size: 60px;
   line-height: 90px;
+  font-weight: 700;
+  text-transform: uppercase;
 
-  @include bold-uppercase;
+  @media screen and ($mobile) {
+    font-size: 30px;
+    line-height: 45px;
+  }
 }
 
 h2 {
   font-size: 38px;
   line-height: 57px;
+  font-weight: 700;
+  text-transform: uppercase;
 
-  @include bold-uppercase;
+  @media screen and ($mobile) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
-@media screen and (max-width: 1239px) {
-    h1 {
-        font-size: 30px;
-        line-height: 45px;
-    }
+.container {
+  width: 1200px;
+  margin: 0 auto;
 
-    h2 {
-        font-size: 18px;
-        line-height: 27px;
-    }      
+  @media screen and ($mobile) {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
 }

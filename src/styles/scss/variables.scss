@@ -1,11 +1,4 @@
-/*
-Создайте файл variables.scss.
-Все основные настройки проекта и цветовые схемы расположите в нём.
-Это удобнее сделать сразу.
-Определите основные цвета сайта и создайте для них соответствующие переменные.
-Подключите файл в самом верху файла app.scss.
-*/
-
+$white: #FFF;
 $black: #08020D;
 $gray: #E0E0E0;
 $dark-gray: #CACACA;
@@ -14,9 +7,4 @@ $green: #34C176;
 $orange: #F89202;
 $purple: #5328A1;
 $red: #95390C;
-
-@mixin bold-uppercase {
-    font-weight: 700;
-    text-transform: uppercase;  
-  }
-  
+$mobile: "max-width: 1239.9px";

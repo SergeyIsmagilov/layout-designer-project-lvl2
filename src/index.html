@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Проект Портал «Music Box» by sergey_ismagilov</title>
-
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
 <body>
-
+    <header class="header container">
+        <div class="logo text-11 mb-16 mobile-w-full">
+            <img class="size-24 mr-16" src="images/logo.svg" alt="Логотип сайта">
+            <p class="color-white uppercase mr-90">Music Box</p>
+        </div>
+        <nav class="menu text-11 mb-16 mobile-w-full">
+            <ul class="mobile-direction">
+                <li><a class="color-white uppercase decoration-none mr-24" href="#">Главная</a></li>
+                <li><a class="color-dark-gray uppercase decoration-none mr-24" href="#">Каталог</a></li>
+                <li><a class="color-dark-gray uppercase decoration-none mr-24" href="#">Исполнители</a></li>
+                <li><a class="color-dark-gray uppercase decoration-none mr-24" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <form class="search ml-auto">
+            <label class="sr-only" for="search">Поиск</label>
+            <input class="w-full border-box" id="search" type="text" placeholder="ПОИСК...">
+        </form>
+    </header>
+<main>
+    <section id="page-description" class="first-section">
+        <div class="container py-200">
+            <h1 class="color-white text-center mobile-mt-48">Онлайн музыка где угодно</h1>
+            <h2 class="color-white text-center mb-32 mobile-mb-0">без ограничений</h2>
+            <p class="color-white text-center my-16">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+            <form class="subscription max-w-570">
+                <label class="sr-only" for="name">Ваше имя</label>
+                <input id="name" type="text" placeholder="Имя">
+                <label class="sr-only" for="email">Ваша почта</label>
+                <input id="email" type="text" placeholder="Email">
+                <button class="btn uppercase" type="submit">Получить доступ</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer></footer>
 </body>
 </html>

@@ -1,3 +1,96 @@
 @import "variables";
 @import "general";
-@import "first-section";
+@import "atomic";
+
+/* "page-description" (header + first-section) */
+
+/* header */
+
+.header {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.search {
+  width: 250px;
+  align-self: normal;
+
+  @media screen and ($mobile) {
+    width: 100%;
+  }
+
+  input {
+    padding: 5px 10px;
+
+    border: none;
+    border-radius: 50px;
+    background-color: $dark;
+    color: $dark-gray;
+  }
+}
+
+/* first-section */
+
+.first-section {
+  background-image: url('../../images/banner.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.subscription {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  margin: 0 auto;
+  color: #FFF;
+
+  input {
+    min-width: 270px;
+    min-height: 50px;
+    padding: 0 0 0 20px;
+    margin-bottom: 1.5rem;
+    border: solid 2px $dark-gray;
+    border-radius: 3px;
+    background: none;
+    box-sizing: border-box;
+    flex: 1 1 270px;
+    font-family: inherit;
+    color: inherit;
+
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: none;
+    height: 60px;
+    background-color: #34C176;
+    flex: 1 1 100%;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+}

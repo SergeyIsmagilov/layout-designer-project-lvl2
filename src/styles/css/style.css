@@ -1,22 +1,3 @@
-@charset "UTF-8";
-/*
-Создайте файл variables.scss.
-Все основные настройки проекта и цветовые схемы расположите в нём.
-Это удобнее сделать сразу.
-Определите основные цвета сайта и создайте для них соответствующие переменные.
-Подключите файл в самом верху файла app.scss.
-*/
-/*
-Создайте файл general.scss.
-Внутри файла расположите базовые стили проекта, которые не привязаны к конкретной секции.
-*/
-/*
-Создайте файл variables.scss.
-Все основные настройки проекта и цветовые схемы расположите в нём.
-Это удобнее сделать сразу.
-Определите основные цвета сайта и создайте для них соответствующие переменные.
-Подключите файл в самом верху файла app.scss.
-*/
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -53,6 +34,12 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1239.9px) {
+  h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
 
 h2 {
   font-size: 38px;
@@ -60,31 +47,210 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
 }
-
-@media screen and (max-width: 1239px) {
-  h1 {
-    font-size: 30px;
-    line-height: 45px;
-  }
+@media screen and (max-width: 1239.9px) {
   h2 {
     font-size: 18px;
     line-height: 27px;
   }
 }
-/*
-Хорошим вариантом является создание отдельного SASS файла на каждый модуль проекта.
-*/
+
 .container {
   width: 1200px;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 1239px) {
+@media screen and (max-width: 1239.9px) {
   .container {
     width: 100%;
-    padding-right: 20px;
+    box-sizing: border-box;
     padding-left: 20px;
+    padding-right: 20px;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.color-white {
+  color: #FFF;
+}
+
+.color-dark-gray {
+  color: #CACACA;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-11 {
+  font-size: 11px;
+}
+
+.size-24 {
+  width: 24px;
+  height: 24px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-570 {
+  max-width: 570px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.mr-90 {
+  margin-right: 90px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.my-16 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.py-200 {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+@media screen and (max-width: 1239.9px) {
+  .mobile-direction {
+    flex-direction: column;
+  }
+  .mobile-w-full {
+    width: 100%;
+  }
+  .mobile-mb-0 {
+    margin-bottom: 0;
+  }
+  .mobile-mt-48 {
+    margin-top: 48px;
+  }
+}
+/* "page-description" (header + first-section) */
+/* header */
+.header {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.search {
+  width: 250px;
+  align-self: normal;
+}
+@media screen and (max-width: 1239.9px) {
+  .search {
+    width: 100%;
+  }
+}
+.search input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #3C3B3D;
+  color: #CACACA;
+}
+
+/* first-section */
+.first-section {
+  background-image: url("../../images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.subscription {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  margin: 0 auto;
+  color: #FFF;
+}
+.subscription input {
+  min-width: 270px;
+  min-height: 50px;
+  padding: 0 0 0 20px;
+  margin-bottom: 1.5rem;
+  border: solid 2px #CACACA;
+  border-radius: 3px;
+  background: none;
+  box-sizing: border-box;
+  flex: 1 1 270px;
+  font-family: inherit;
+  color: inherit;
+}
+.subscription input::placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+.subscription .btn {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+  height: 60px;
+  background-color: #34C176;
+  flex: 1 1 100%;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
